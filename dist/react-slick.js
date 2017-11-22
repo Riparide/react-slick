@@ -2862,16 +2862,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var style = {};
 
 	  if (spec.variableWidth === undefined || spec.variableWidth === false) {
-	    style.width = spec.slideWidth + 0.2;
+	    style.width = spec.slideWidth;
 	  }
 
 	  if (spec.fade) {
 	    style.position = 'relative';
-	    if (spec.variableWidth === undefined || spec.variableWidth === false) {
-	      style.left = -spec.index * (spec.slideWidth + 0.2);
-	    } else {
-	      style.left = -spec.index * spec.slideWidth;
-	    }
+	    style.left = -spec.index * spec.slideWidth;
 	    style.opacity = spec.currentSlide === spec.index ? 1 : 0;
 	    style.transition = 'opacity ' + spec.speed + 'ms ' + spec.cssEase;
 	    style.WebkitTransition = 'opacity ' + spec.speed + 'ms ' + spec.cssEase;
